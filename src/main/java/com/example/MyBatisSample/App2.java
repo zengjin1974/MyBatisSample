@@ -32,15 +32,15 @@ public class App2 {
             // SQLセッションを取得します
             try (SqlSession session = factory.openSession()) {
 
-                // ActorテーブルのMapperを取得します
+                // EmployeeテーブルのMapperを取得します
                 EmployeeMapper map = session.getMapper(EmployeeMapper.class);
 
-                // Actorテーブルの条件検索用クラスを生成します
+                // Employeeテーブルの条件検索用クラスを生成します
                 EmployeeExample ex = new EmployeeExample();
 
                 // WHERE
-                //    (first_name LIKE 'T%' AND actor_id < 100)
-                //    OR (last_name LIKE 'S%' AND actor_id > 100)
+                //    (employee_name LIKE 'R%')
+                //    OR (employee_name LIKE 'J%')
                 // 検索条件に↑と同等の条件を設定しています
                 // 　  Criteriaを作成し、AND条件を追加する (1)
                 ex.createCriteria().andEmployeeNameLike("R%");
@@ -48,13 +48,13 @@ public class App2 {
                 ex.or().andEmployeeNameLike("J%");
 
                 // 上記の条件でテーブルを検索します
-                List<Employee> actorList = map.selectByExample(ex);
+                List<Employee> empList = map.selectByExample(ex);
 
                 // 取得結果を表示します
                 System.out.println("employee_id, employee_name");
-                for (Employee actor : actorList) {
+                for (Employee emp : empList) {
 
-                    System.out.printf("%s, %s \n", actor.getEmployeeId(), actor.getEmployeeName());
+                    System.out.printf("%s, %s \n", emp.getEmployeeId(), emp.getEmployeeName());
                 }
             }
         } catch (IOException e) {

@@ -29,9 +29,9 @@ public class App {
             // SQLセッションを取得します(3)
             try (SqlSession session = factory.openSession()) {
 
-                // ActorテーブルのMapperを取得します(4)
+                // EmployeeテーブルのMapperを取得します(4)
             	EmployeeMapper map = session.getMapper(EmployeeMapper.class);
-                // Actorテーブルの主キー（actor_id)が１であるレコードを検索します(5)
+                // Employeeテーブルの主キー（Employee_id)が１であるレコードを検索します(5)
             	Employee emp = map.selectByPrimaryKey((long)1);
 
           // 取得した内容を確認します
