@@ -8,7 +8,7 @@
 <!--     JDBCの設定です (1) -->
         <jdbcConnection
             driverClass="com.mysql.jdbc.Driver"
-            connectionURL="jdbc:mysql://10.167.39.187:3306/lab"
+            connectionURL="jdbc:mysql://10.167.39.187:3306/sakila"
             userId="root"
             password="admin2017"
         />
@@ -29,6 +29,6 @@
         />
 
 <!--     生成対象のテーブルです（3) -->
-        <table schema="lab" tableName="%" />
+        <table schema="sakila" tableName="%" />
     </context>
 </generatorConfiguration>
