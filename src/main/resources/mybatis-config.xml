@@ -19,11 +19,20 @@
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://hdm109008269.my3w.com:3306/hdm109008269_db" />
+                <property name="username" value="hdm109008269" />
+                <property name="password" value="yqb18600055110" />
+            </dataSource>
+        </environment>
+<!--         <environment id="sakila">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
                 <property name="url" value="jdbc:mysql://10.167.39.187:3306/sakila" />
                 <property name="username" value="root" />
                 <property name="password" value="admin2017" />
             </dataSource>
-        </environment>
+        </environment> -->
     </environments>
 
 <!--     エンティティのパッケージを指定します(2) -->
