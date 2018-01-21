@@ -5,8 +5,8 @@
 <configuration>
 
 <!--     JDBCの設定です(1) -->
-    <environments default="sakila">
-<!--         <environment id="lab">
+    <environments default="lab@bfs">
+        <environment id="lab@bfs">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
@@ -14,8 +14,8 @@
                 <property name="username" value="root" />
                 <property name="password" value="admin2017" />
             </dataSource>
-        </environment> -->
-        <environment id="sakila">
+        </environment>
+        <environment id="sakila@yqb">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
@@ -24,7 +24,7 @@
                 <property name="password" value="yqb18600055110" />
             </dataSource>
         </environment>
-<!--         <environment id="sakila">
+        <environment id="sakila@bfs">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
@@ -32,7 +32,7 @@
                 <property name="username" value="root" />
                 <property name="password" value="admin2017" />
             </dataSource>
-        </environment> -->
+        </environment>
     </environments>
 
 <!--     エンティティのパッケージを指定します(2) -->

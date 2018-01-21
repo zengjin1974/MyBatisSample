@@ -24,7 +24,7 @@ public class TestEmployee {
         try (Reader r = Resources.getResourceAsReader("mybatis-config.xml");) {
 
             // 読み込んだ設定ファイルからSqlSessionFactoryを生成します(2)
-            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(r);
+            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(r,"lab@bfs");
 
             // SQLセッションを取得します(3)
             try (SqlSession session = factory.openSession()) {
