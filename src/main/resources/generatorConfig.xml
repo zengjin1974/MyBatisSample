@@ -29,6 +29,6 @@
         />
 
 <!--     生成対象のテーブルです（3) -->
-        <table schema="lb01_pt" tableName="%" />
+        <table schema="lb01_pt" tableName="TEST2" />
     </context>
 </generatorConfiguration>

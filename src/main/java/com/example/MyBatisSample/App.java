@@ -21,7 +21,7 @@ public class App {
         try (Reader r = Resources.getResourceAsReader("mybatis-config.xml");) {
 
             // 読み込んだ設定ファイルからSqlSessionFactoryを生成します(2)
-            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(r,"sakila@bfs");
+            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(r,"sakila@yqb");
 
             // SQLセッションを取得します(3)
             try (SqlSession session = factory.openSession()) {
@@ -31,7 +31,7 @@ public class App {
                 // Actorテーブルの主キー（actor_id)が１であるレコードを検索します(5)
                 Actor actor = map.selectByPrimaryKey((short) 1);
 
-          // 取得した内容を確認します
+                // 取得した内容を確認します
                 System.out.println("actor.getActorId    = " + actor.getActorId());
                 System.out.println("actor.getFirstName  = " + actor.getFirstName());
                 System.out.println("actor.getLastName   = " + actor.getLastName());

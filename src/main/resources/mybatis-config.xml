@@ -6,6 +6,15 @@
 
 <!--     JDBCの設定です(1) -->
     <environments default="lab@bfs">
+        <environment id="lb01_pt@bfs">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="org.postgresql.Driver" />
+                <property name="url" value="jdbc:postgresql://10.167.39.185:27500/dept_dev" />
+                <property name="username" value="approot" />
+                <property name="password" value="approot" />
+            </dataSource>
+        </environment>
         <environment id="lab@bfs">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
@@ -38,6 +47,7 @@
 <!--     エンティティのパッケージを指定します(2) -->
     <mappers>
         <package name="com.example.entity" />
+        <package name="com.feast.kanjo.entity" />
     </mappers>
 
 </configuration>
