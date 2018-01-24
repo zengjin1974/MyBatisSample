@@ -5,7 +5,7 @@
 <configuration>
 
 <!--     JDBCの設定です(1) -->
-    <environments default="lab@bfs">
+    <environments default="sakila@yqb">
         <environment id="lb01_pt@bfs">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
